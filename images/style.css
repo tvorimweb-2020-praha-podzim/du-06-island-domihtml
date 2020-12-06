@@ -51,9 +51,9 @@ header {
 }
 
 
-/* HlAVNI OBSAH */
+/* MAIN */
 
-.obsah {
+main {
 box-shadow: 0px 10px 10px #acaaaa;
 min-width: 300px;
 }
@@ -94,7 +94,7 @@ p.popisek {
 
 
 
-/* OBSAH */
+/* MAIN */
 
 
 .uvod img,.proc img, .musite_videt img {
@@ -153,143 +153,157 @@ footer p {
     font-size: 14px;
 }
 
+/* 1.breakpoint (tablet) */
+
 @media screen and (min-width: 500px) {
-    .menu {
-        flex-direction: row;
-        font-size: 14px;
-        white-space: nowrap;
-        margin: 2rem;
     
-    }
-    .menu li {
     
-       border: 1px  solid lightgrey;
-       border-right: none;
-      
-    }
+    /* menu */
+        .menu {
+            flex-direction: row;
+            font-size: 14px;
+            white-space: nowrap;
+            margin: 2rem;
+        
+        }
+        .menu li {
+        
+        border: 1px  solid lightgrey;
+        border-right: none;
+        
+        }
 
-    .menu a:hover {
-        text-decoration: underline;
-        color: rgb(41, 41, 41);
-        font-weight: bold;
-    }
+        .menu a:hover {
+            text-decoration: underline;
+            color: rgb(41, 41, 41);
+            font-weight: bold;
+        }
 
-    #tlacitko {
-        border-left: none;
-    }
-    
-    p.popisek {
-        position: absolute;
-        color:white;
-        right: 30px;
-        bottom: 20px;
-    }
-    p a {
-        color:white;
-    }
-    .uvod, .proc, .musite_videt {
-        position: relative;
-    }
-    .fotka{
-        position: relative;
-    }
-/* Fotogalerie */
+        #tlacitko {
+            border-left: none;
+        }
+        
+    /* main */
 
-
-   figcaption {
-    position: absolute;
-    display: none;
-    font-weight: bold;
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    margin: 0;
-    height: 48px;
-    padding-bottom: 0.5rem; 
-    
-    }
+        p.popisek {
+            position: absolute;
+            color:white;
+            right: 30px;
+            bottom: 20px;
+        }
+        p a {
+            color:white;
+        }
+        .uvod, .proc, .musite_videt {
+            position: relative;
+        }
+        .fotka{
+            position: relative;
+        }
+    /* Fotogalerie */
 
 
-    .foto {
-        width: 50%;
-        position: relative;
-        line-height: 0;
-        overflow: hidden;
-    }
-    
-    .popisek, .popisek-copy, .popisek a {
-        line-height: 1.6;
-        color: white;
-        font-size: 14px;
-    }
-   
-   
-    .foto:hover img {
-        opacity: 0.6;
-        transform: scale(1.2);
+        figcaption {
+            position: absolute;
+            display: none;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            margin: 0;
+            height: 48px;
+            padding-bottom: 0.5rem; 
+            
+            }
+
+
+            .foto {
+                width: 50%;
+                position: relative;
+                line-height: 0;
+                overflow: hidden;
+            }
+            
+            .popisek, .popisek-copy, .popisek a {
+                line-height: 1.6;
+                color: white;
+                font-size: 14px;
+            }
         
         
-    }
-    .foto:hover .popisek {
-        display: block;
-        transform: translate(0rem,-3rem);
-        transition: block 2s;
-       
-    }
-   footer a {
-       color: grey;
-   }
+            .foto:hover img {
+                opacity: 0.6;
+                transform: scale(1.2);
+                
+                
+            }
+            .foto:hover .popisek {
+                display: block;
+                transform: translate(0rem,-3rem);
+                transition: block 2s;
+            }
+
+     /* paticka */       
+            
+            footer a {
+                color: grey;
+            }
 }
+/* 2.breakpoint (PC) */
 
 @media screen and (min-width: 1000px) {
 
-.obsah {
-        width: 960px;
-        position: relative;
-        background-color:#f5f5f5 ;
-        margin: auto;
-        bottom: 20px;
-        z-index:1;
-    }
+    /* main */
 
-header {
-    z-index: -1;
-}
-.navigace {
-    display: flex;
-    flex-wrap: wrap;
-}
-.menu {
-    flex-basis: 20%;
-    flex-direction: column;
-}
-.menu li {
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
-    padding: 8px;
-    text-align: left;
-}
-.uvod {
-    flex-basis: 70%;
-}
-.navigace p.popisek {
-        position: absolute;
-        color:white;
-        right: 30px;
-        bottom: 20px;
-}
-#proc-odstavec {
-    padding-right: 12rem;
-}
-#mustsee-odstavec, #zmena-strany {
-    padding-left: 15rem;
-}
+        main {
+                width: 960px;
+                position: relative;
+                background-color:#f5f5f5 ;
+                margin: auto;
+                bottom: 20px;
+                z-index:1;
+            }
 
-.foto {
-    width: calc((100% / 3) - 0.1px);
-}
-footer {
-    width: 960px;
-    margin: auto;
-}
+        header {
+            z-index: -1;
+        }
+        .navigace {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .menu {
+            flex-basis: 20%;
+            flex-direction: column;
+        }
+        .menu li {
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+            padding: 8px;
+            text-align: left;
+        }
+        .uvod {
+            flex-basis: 70%;
+        }
+        .navigace p.popisek {
+                position: absolute;
+                color:white;
+                right: 30px;
+                bottom: 20px;
+        }
+        #proc-odstavec {
+            padding-right: 12rem;
+        }
+        #mustsee-odstavec, #zmena-strany {
+            padding-left: 15rem;
+        }
+    /* fotogalerie */
+        .foto {
+            width: calc((100% / 3) - 0.1px);
+        }
+
+     /* paticka */
+        footer {
+            width: 960px;
+            margin: auto;
+        }
 }
