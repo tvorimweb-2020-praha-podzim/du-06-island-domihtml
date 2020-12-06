@@ -55,10 +55,8 @@ header {
 
 .obsah {
 box-shadow: 0px 10px 10px #acaaaa;
-min-width: 400px;
+min-width: 300px;
 }
-
-
 
 
 /* MENU */
@@ -84,10 +82,7 @@ min-width: 400px;
 .menu a {
     text-decoration: none;
 }
-.menu a:hover {
-    text-decoration: underline;
-    color: rgb(41, 41, 41);
-}
+
 p.popisek {
     color:grey;
     text-align: center;
@@ -117,21 +112,24 @@ h2 {
 
 .galerie {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
+
 }
-.foto {
-    height: 100%;
-    margin:0;
-    justify-content: center;
-    align-content: center;
+figure {
+    margin: 0;
 }
+figure img {
+    
+    width: 100%;
+}
+
 .popisek {
     font-size: 20x;
     font-weight: 900;
     text-align: center;
     color:#464646;
-    font-weight: lighter;
     font-family: 'Raleway', serif;
+    
 }
 .popisek-copy {
     font-size: 14px;
@@ -146,3 +144,80 @@ footer p {
     font-size: 14px;
 }
 
+@media screen and (min-width: 500px) {
+    .menu {
+        flex-direction: row;
+        font-size: 14px;
+        white-space: nowrap;
+        margin: 2rem;
+    
+    }
+    .menu li {
+    
+       border: 1px  solid lightgrey;
+       border-right: none;
+      
+    }
+
+    .menu a:hover {
+        text-decoration: underline;
+        color: rgb(41, 41, 41);
+        font-weight: bold;
+    }
+
+    #tlacitko {
+        border-left: none;
+    }
+    
+    p.popisek {
+        position: absolute;
+        color:white;
+        right: 30px;
+        bottom: 20px;
+    }
+    p a {
+        color:white;
+    }
+    .uvod, .proc, .musite_videt {
+        position: relative;
+    }
+/* Fotogalerie */
+
+
+   figcaption {
+    position: absolute;
+    display: none;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    margin: 0;
+    height: 48px;
+    padding-bottom: 0.5rem; 
+    }
+
+
+    .foto {
+        width: 50%;
+        position: relative;
+        line-height: 0;
+    }
+    
+    .popisek, .popisek-copy, .popisek a {
+        line-height: 1.6;
+        color: white;
+        font-size: 14px;
+    }
+   
+
+    .foto:hover img {
+        opacity: 0.6;
+        transition: 500ms;
+    }
+    .foto:hover .popisek {
+        display: block;
+        transform: translate(0rem,-3rem);
+        transition: block 2s;
+       
+    }
+   
+}
