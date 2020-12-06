@@ -6,21 +6,18 @@
  pozadi           #f5f5f5
  dekorace nadpisů #629edb
 */
-
-
 body {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
-    font-family: 'Merriweather', serif;
+    font-family: 'Raleway', serif;
     font-size: 16px;
     line-height: 1.6;
+    font-weight: 100;
+
 }
 a {
     color: grey;
-}
-div, section {
-    border: 2px solid hotpink;
 }
 
 p, h2 {
@@ -41,11 +38,22 @@ header {
     text-align: center;
     padding: 1rem;
     margin-bottom: 0;
-    text-shadow: 1px 2px 3px #808080;
+    text-shadow: 1px 2px 3px #2b2a2a;
 }
 .autor {
+    opacity: 85%;
     font-style: italic;
 }
+
+
+/* HlAVNI OBSAH */
+
+.obsah {
+box-shadow: 0px 10px 10px #acaaaa;
+min-width: 400px;
+}
+
+
 
 /* MENU */
 
@@ -71,19 +79,22 @@ header {
     text-decoration: none;
 }
 .menu a:hover {
-    background-color: darkgrey;
+    text-decoration: underline;
+    color: rgb(41, 41, 41);
 }
-.popisek {
+p.popisek {
     color:grey;
     text-align: center;
     margin: 0;
     font-size: 14px;
+
 }
 
 
 
 
 /* OBSAH */
+
 .uvod img,.proc img, .musite_videt img {
     width: 100%;
     padding: 0;
@@ -94,9 +105,6 @@ h2 {
     font-family: 'Raleway', serif;
     font-size: 1.8rem;
 }
-
-
-
 
 /* FOTOGALERIE */
 
@@ -110,5 +118,24 @@ h2 {
     justify-content: center;
     align-content: center;
 }
+.popisek {
+    font-size: 20x;
+    font-weight: 900;
+    text-align: center;
+    color:#464646;
+    font-weight: lighter;
+    font-family: 'Raleway', serif;
+}
+.popisek-copy {
+    font-size: 14px;
+    font-weight: normal;
+    color:grey;
+    
+}
 
 /* PATICKA */
+footer p {
+    color:grey;
+    font-size: 14px;
+}
+
